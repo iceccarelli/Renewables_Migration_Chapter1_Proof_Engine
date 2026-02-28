@@ -1,0 +1,11 @@
+parameter,value,unit,description
+f0,50.0,Hz,Nominal frequency
+tau_mcp,30.0,ms,MCP response time constant
+h_sys_ref,8.0,GVA*s,Reference inertia for stability manifold
+mcp_latency_ref,100.0,ms,Reference latency for stability manifold
+phi_mcp_base,0.1,p.u.,Base protocol-driven damping factor
+epsilon_equity,0.2,index,Equity constraint limit
+p_min_essential,0.8,p.u.,Minimum essential power delivery
+rocof_limit,2.0,Hz/s,Maximum allowable RoCoF
+v_base,400,kV,Base transmission voltage
+s_base,100,MVA,Base power capacity
