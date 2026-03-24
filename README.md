@@ -4,7 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
-[![Tests](https://github.com/iceccarelli/Renewables_Migration_Chapter1_Proof_Engine/actions/workflows/tests.yml/badge.svg)](https://github.com/iceccarelli/Renewables_Migration_Chapter1_Proof_Engine/actions)
 
 This repository is the **official computational companion** to Chapter 1 of Vincenzo Grimaldi’s *The Renewables Migration* (March 21, 2026). It mathematically verifies the exact engineering crisis that opens the book — the 03:17 moment on a windless December night in 2025 when Continental Europe’s frequency hit **49.91 Hz**, synthetic inertia reached its historic floor of **130 GVA·s**, and the Rate-of-Change-of-Frequency (RoCoF) was 30 ms from breaching 1 Hz/s.
 
@@ -69,9 +68,9 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    A[Kinetic Inertia<br/>0–2 s<br/>130 GVA·s floor] --> B[Primary Control (FCR)<br/>≤30 s<br/>MCP-enabled 180 ms response]
-    B --> C[Secondary Control (aFRR)<br/>5–15 min<br/>Pre-emptive weather & demand agents]
-    C --> D[Tertiary Control & Redispatch<br/>≥15 min<br/>Autonomous, <€1 bn/year]
+    A[Kinetic Inertia\n0-2 s\n130 GVA·s floor] --> B[Primary Control (FCR)\n<= 30 s\nMCP-enabled 180 ms response]
+    B --> C[Secondary Control (aFRR)\n5-15 min\nPre-emptive weather & demand agents]
+    C --> D[Tertiary Control & Redispatch\n>= 15 min\nAutonomous, under €1 bn/year]
     style A fill:#1e3a8a,stroke:#60a5fa
     style D fill:#166534,stroke:#4ade80
 ```
@@ -89,7 +88,7 @@ graph TD
     G --> H[First Scmd Manifold Updates +6.1]
     H --> I[Production Integrator Tools<br/>Tests • Dashboard • Notebooks]
 
-    style B fill:#1e3a8a,stroke:#60a5fa
+    style B fill:#93c5fd,stroke:#1e40af
     style H fill:#166534,stroke:#4ade80
 ```
 
@@ -119,7 +118,7 @@ Renewables_Migration_Chapter1_Proof_Engine/
 │   ├── stability_surface_3d.png
 │   ├── intervention_cost_pivot.png
 │   ├── scmd_first_update.png
-│   └── defense_hierarchy.png     # (new — matches Mermaid above)
+│   └── defense_hierarchy.png
 ├── requirements.txt
 ├── LICENSE (MIT)
 └── README.md
