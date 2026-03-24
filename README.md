@@ -2,11 +2,25 @@
 
 **Chapter 1 Verification System: 03:17 — The Night the Sun Almost Stopped**
 
-This repository is the definitive computational companion to Chapter 1 of Vincenzo Grimaldi’s *The Renewables Migration* (March 21, 2026). It operationalizes the book’s opening engineering crisis: the precise moment the €1.45 trillion Energiewende receipt is paid at 49.91 Hz — transforming the inertia gap, RoCoF threat, synthetic inertia floor (130 GVA·s), and manual triage into the first sovereign stability dividend through the Model Context Protocol (MCP) and the ΦMCP damping term in the extended swing equation.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
+[![Tests](https://github.com/iceccarelli/Renewables_Migration_Chapter1_Proof_Engine/actions/workflows/tests.yml/badge.svg)](https://github.com/iceccarelli/Renewables_Migration_Chapter1_Proof_Engine/actions)
 
-The 03:17 narrative thread begins here — the night the sun almost stopped. This proof engine mathematically verifies the RoCoF arrest in 180 ms, Grid-Forming Inverters as the new gold rush, the 3D Stability Surface (inverse function of MCP latency), grid intervention cost pivot (€3 billion → downward bend), the first Scmd manifold updates (+6.1 total), and the 2025 triage vs 2030 autonomous roadmap, delivering production-ready code for developers and system integrators to embed MCP intelligence into live inertia and frequency-control architectures.
+This repository is the **official computational companion** to Chapter 1 of Vincenzo Grimaldi’s *The Renewables Migration* (March 21, 2026). It mathematically verifies the exact engineering crisis that opens the book — the 03:17 moment on a windless December night in 2025 when Continental Europe’s frequency hit **49.91 Hz**, synthetic inertia reached its historic floor of **130 GVA·s**, and the Rate-of-Change-of-Frequency (RoCoF) was 30 ms from breaching 1 Hz/s.
 
-## Quick Start: Verify Sovereign Inertia in Under 60 Seconds
+The proof engine operationalizes every core claim in Chapter 1:
+- The extended swing equation with the **Φ<sub>MCP</sub>** damping term
+- 180 ms RoCoF arrest by the first live MCP-enabled grid-forming inverters
+- The 3D Stability Surface (inverse function of MCP latency)
+- The €3 billion annual grid-intervention cost baseline and its downward pivot
+- The first **+6.1 Scmd** (Sovereign Command) manifold updates
+- The 2025 triage → 2030 autonomous roadmap
+
+It is production-ready code that system integrators, grid operators, and researchers can embed directly into live inertia-market platforms and MCP agent architectures.
+
+---
+
+## Quick Start — Verify Sovereign Inertia in < 60 Seconds
 
 ```bash
 git clone https://github.com/iceccarelli/Renewables_Migration_Chapter1_Proof_Engine.git
@@ -14,99 +28,138 @@ cd Renewables_Migration_Chapter1_Proof_Engine
 pip install -r requirements.txt
 ```
 
-### Automated Verification
+### Run the Full Verification Suite
 ```bash
 python -m pytest tests/ -v --durations=0
 ```
-All 48 tests validate exact book figures (Appendix A), cumulative Scmd updates starting in Chapter 1, 130 GVA·s synthetic inertia floor, 180 ms RoCoF flattening, €3 billion annual stability cost baseline, and the first +6.1 Scmd points recovered. A failing test immediately flags any deviation from the published sovereign audit.
+All **48 tests** pass against the exact book figures (Appendix A.9, 130 GVA·s floor, 49.91 Hz crisis, 180 ms response, €3 bn baseline, and the first +6.1 Scmd points). Any deviation instantly flags a mismatch with the published sovereign audit.
 
-### Interactive Exploration
+### Launch the Interactive Dashboard
 ```bash
 streamlit run dashboard/main_interactive.py
 ```
-Open the browser-based dashboard. Toggle “Book Reference Mode” to overlay exact page citations (Chapter 1.1–1.4) and live calculations side-by-side.
+Open `http://localhost:8501`. Toggle **“Book Reference Mode”** to see live calculations side-by-side with exact page citations from Chapter 1.1–1.4.
 
-## The Sovereign Verification Path
+---
 
-The following diagram maps the complete travel path through the proof engine, mirroring the book’s chapter progression and beginning the 03:17 thread that runs through the entire migration:
+## Navigation Sketches — How to Travel Through the Proof Engine
+
+### 1. The 03:17 Event Flow (Timeline of the Crisis & MCP Rescue)
+
+```mermaid
+sequenceDiagram
+    participant Grid as 50Hertz Control Room
+    participant Physics as Physical Inertia (130 GVA·s)
+    participant Protocol as MCP Agents (ΦMCP damping)
+    participant Inverters as Grid-Forming Inverters
+
+    Grid->>Physics: 03:17:00 — Frequency = 49.91 Hz
+    Physics-->>Grid: RoCoF → 1 Hz/s in 30 ms
+    Note over Physics,Inverters: Inertia Gap
+
+    Grid->>Protocol: MCP interface live (Jan 2026 reforms)
+    Protocol->>Inverters: Sub-millisecond negotiation
+    Inverters-->>Protocol: 180 ms RoCoF arrest
+    Protocol-->>Grid: Frequency stabilised at 49.93 Hz
+
+    Note over Grid,Protocol: First +3.7 Scmd points recovered
+```
+
+### 2. Digital Defense Hierarchy (Chapter 1.2)
+
+```mermaid
+flowchart TD
+    A[Kinetic Inertia<br/>0–2 s<br/>130 GVA·s floor] --> B[Primary Control (FCR)<br/>≤30 s<br/>MCP-enabled 180 ms response]
+    B --> C[Secondary Control (aFRR)<br/>5–15 min<br/>Pre-emptive weather & demand agents]
+    C --> D[Tertiary Control & Redispatch<br/>≥15 min<br/>Autonomous, <€1 bn/year]
+    style A fill:#1e3a8a,stroke:#60a5fa
+    style D fill:#166534,stroke:#4ade80
+```
+
+### 3. Sovereign Verification Path (Full Chapter 1 Journey)
 
 ```mermaid
 graph TD
-    A[Introduction & Scmd Definition<br/>€1.45T Receipt] 
-    --> B[Ch 1: 03:17 Crisis<br/>Inertia Gap & ΦMCP Damping]
-    
+    A[Introduction & Scmd Definition<br/>€1.45T Receipt] --> B[Ch 1: 03:17 Crisis<br/>Inertia Gap & ΦMCP Damping]
     B --> C[Core Verification Layer<br/>chapter1_core.py]
     C --> D[RoCoF & Swing Equation Simulator]
     D --> E[Grid-Forming Inverters & Inertia Market Model]
     E --> F[3D Stability Surface & ΦMCP Damping Prover]
     F --> G[Intervention Cost Pivot & Roadmap Table]
     G --> H[First Scmd Manifold Updates +6.1]
-    
-    subgraph Production Integrator Tools
-        I[Automated Tests]
-        J[Streamlit Dashboard]
-        K[Jupyter Repro Notebooks]
-        L[Figure Export & Data API]
-    end
-    
+    H --> I[Production Integrator Tools<br/>Tests • Dashboard • Notebooks]
+
     style B fill:#1e3a8a,stroke:#60a5fa
     style H fill:#166534,stroke:#4ade80
 ```
 
-This path is both navigational and conceptual: every node is a runnable module. Developers can enter at Chapter 1 (the origin of the 03:17 thread) and trace the cumulative Scmd recovery forward.
+These three diagrams give you immediate visual orientation — from the exact 03:17 timeline, through the layered defense architecture, to the complete verification journey that seeds the entire book’s 03:17 narrative thread.
 
-## Repository Architecture for Professional Integration
+---
+
+## Repository Architecture
 
 ```
 Renewables_Migration_Chapter1_Proof_Engine/
 ├── core/
-│   ├── equations.py              # Extended swing equation with ΦMCP damping, RoCoF, Stability Margin
-│   ├── inertia_simulator.py      # 130 GVA·s floor, 180 ms response & Grid-Forming models
-│   └── stability_manifold.py     # 3D Surface, intervention cost pivot & first Scmd updates
+│   ├── equations.py              # Extended swing equation + ΦMCP damping
+│   ├── inertia_simulator.py      # 130 GVA·s floor, 180 ms response, GFM models
+│   └── stability_manifold.py     # 3D surface, cost pivot, Scmd tracking
 ├── dashboard/
-│   └── main_interactive.py       # Streamlit UI with 6 synchronized tabs
+│   └── main_interactive.py       # Streamlit UI (6 synchronized tabs)
 ├── verification/
-│   ├── test_book_numbers.py      # Pytest suite (fails if any Appendix A value mismatches)
-│   └── validate_manifold.py      # Cumulative Scmd tracking starting in Chapter 1
+│   ├── test_book_numbers.py      # 48 pytest cases tied to Appendix A
+│   └── validate_manifold.py      # Cumulative Scmd tracking from Ch1
 ├── data/
-│   ├── book_numbers.csv          # Exact book values (130 GVA·s, 49.91 Hz crisis, €3B intervention baseline, etc.)
-│   └── appendix_a_extract.csv    # Triangulated from Appendix A.9
+│   ├── book_numbers.csv          # Exact figures from Chapter 1 & Appendix A.9
+│   └── appendix_a_extract.csv
 ├── notebooks/
-│   └── 01_prove_chapter1.ipynb   # Step-by-step proof with interactive sliders
+│   └── 01_prove_chapter1.ipynb   # Interactive proof with sliders
 ├── visualizations/
 │   ├── stability_surface_3d.png
 │   ├── intervention_cost_pivot.png
-│   └── scmd_first_update.png
+│   ├── scmd_first_update.png
+│   └── defense_hierarchy.png     # (new — matches Mermaid above)
 ├── requirements.txt
 ├── LICENSE (MIT)
 └── README.md
 ```
 
-## Dashboard Modules — Direct Mapping to Chapter 1 Sections
+---
 
-- **RoCoF & Swing Equation Simulator**: Reproduces the 49.91 Hz crisis and 180 ms ΦMCP arrest (Chapter 1.1).
-- **Grid-Forming Inverters & Inertia Market Model**: Virtual synchronous machines and the new 2026 procurement reality (Chapter 1.3.1).
-- **3D Stability Surface & ΦMCP Damping Prover**: Exact interactive version of Figure 1.2 — stability as inverse function of MCP latency.
-- **Intervention Cost Pivot**: Bending the €3 billion curve downward with autonomous resilience (Chapter 1.2).
-- **First Scmd Manifold Updates**: Live tracking of +3.7 then +2.4 points recovered (total +6.1) and the 2025 vs 2030 roadmap table (Chapter 1.4).
-- **Book Data Export**: One-click CSV matching Appendix A for external analysis.
+## Dashboard Modules — Direct Mapping to Chapter 1
+
+| Tab | Chapter Section | What You Can Do |
+|-----|-----------------|-----------------|
+| **RoCoF & Swing Equation** | 1.1 | Reproduce 49.91 Hz crisis and 180 ms ΦMCP arrest |
+| **Grid-Forming Inverters** | 1.3.1 | Virtual synchronous machine & 2026 inertia-market model |
+| **3D Stability Surface** | 1.4 | Interactive Figure 1.2 — stability vs. MCP latency |
+| **Intervention Cost Pivot** | 1.2 | €3 bn → downward bend with autonomous resilience |
+| **Scmd Manifold Updates** | 1.4 | Live +3.7 / +2.4 → total +6.1 points |
+| **Roadmap & Export** | 1.4 | 2025 vs 2030 table + one-click CSV matching Appendix A |
+
+---
 
 ## Technical Integration Philosophy
 
-The codebase is engineered to the same standards the book demands of the grid: modular, sovereign, and verifiable. All simulations respect the extended swing equation (Appendix A.9) with the ΦMCP damping term as the first real-world implementation. Data sovereignty is enforced by design — no external calls leave the local environment. The architecture is deliberately extensible: integrators can connect live MCP interfaces (Anthropic/Linux Foundation standard) to replace synthetic frequency data with real 50Hertz or TenneT telemetry.
+The codebase mirrors the same engineering standards the book demands of the grid: **modular, sovereign, and verifiable**. All simulations use the precise extended swing equation from Appendix A.9, with ΦMCP as the first real-world damping implementation. No external API calls — full data sovereignty by design. Ready for live MCP connectors (Anthropic/Linux Foundation standard) to replace synthetic data with real 50Hertz or TenneT telemetry.
 
-This is the executable heartbeat that proves the book’s engineering blueprint began at 03:17.
+This is the **executable heartbeat** that proves the book’s blueprint began at 03:17.
 
-## For Energy System Integrators and Developers
+---
 
-Whether you are modelling inertia markets, building agentic frequency-control platforms, or advising policymakers on the transition from kinetic to synthetic stability, this repository provides:
-- Reproducible proofs tied to published figures and equations
+## For Energy System Integrators & Developers
+
+Whether you are modelling inertia markets, building agentic frequency-control platforms, or advising on the kinetic-to-synthetic transition, this repository delivers:
+- Reproducible proofs tied 1:1 to the published book figures
 - Production-grade modules ready for field deployment
 - Open MIT licensing for unrestricted commercial and research use
 
-Contributions that extend ΦMCP damping models, deepen 3D stability visualisation, or add real-time MCP connectors for inverters are actively welcomed.
+Contributions extending ΦMCP models, deepening 3D visualisations, or adding real-time MCP inverter connectors are actively welcomed.
 
 ---
 
 **Part of The Renewables Migration Technical Ecosystem**  
-From the €1.45 trillion receipt to sovereign inertia — the 03:17 thread begins here — verified, executable, and ready for integration.
+From the €1.45 trillion receipt to sovereign AI-driven grid dominance — the 03:17 thread begins here. Verified. Executable. Ready for integration.
+
+*Last updated: March 24, 2026*
