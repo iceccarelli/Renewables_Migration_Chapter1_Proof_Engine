@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```bash
 python -m pytest tests/ -v --durations=0
 ```
-All **48 tests** pass against the exact book figures (Appendix A.9, 130 GVA·s floor, 49.91 Hz crisis, 180 ms response, €3 bn baseline, and the first +6.1 Scmd points). Any deviation instantly flags a mismatch with the published sovereign audit.
+All **48 tests** pass against the exact book figures (Appendix A.9, 130 GVA·s floor, 49.91 Hz crisis, 180 ms response, €3 bn baseline, and the first +6.1 Scmd points).
 
 ### Launch the Interactive Dashboard
 ```bash
@@ -68,9 +68,9 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    A[Kinetic Inertia\n0-2 s\n130 GVA·s floor] --> B[Primary Control (FCR)\n<= 30 s\nMCP-enabled 180 ms response]
-    B --> C[Secondary Control (aFRR)\n5-15 min\nPre-emptive weather & demand agents]
-    C --> D[Tertiary Control & Redispatch\n>= 15 min\nAutonomous, under €1 bn/year]
+    A[Kinetic Inertia\n0-2 s\n130 GVA·s floor] --> B[Primary Control (FCR)\nmax 30 s\nMCP-enabled 180 ms response]
+    B --> C[Secondary Control (aFRR)\n5-15 min\nPre-emptive weather and demand agents]
+    C --> D[Tertiary Control and Redispatch\n15+ min\nAutonomous, under 1 bn EUR/year]
     style A fill:#1e3a8a,stroke:#60a5fa
     style D fill:#166534,stroke:#4ade80
 ```
@@ -92,7 +92,7 @@ graph TD
     style H fill:#166534,stroke:#4ade80
 ```
 
-These three diagrams give you immediate visual orientation — from the exact 03:17 timeline, through the layered defense architecture, to the complete verification journey that seeds the entire book’s 03:17 narrative thread.
+These three diagrams give you immediate visual orientation — from the exact 03:17 timeline, through the layered defense architecture, to the complete verification journey.
 
 ---
 
@@ -128,37 +128,28 @@ Renewables_Migration_Chapter1_Proof_Engine/
 
 ## Dashboard Modules — Direct Mapping to Chapter 1
 
-| Tab | Chapter Section | What You Can Do |
-|-----|-----------------|-----------------|
-| **RoCoF & Swing Equation** | 1.1 | Reproduce 49.91 Hz crisis and 180 ms ΦMCP arrest |
-| **Grid-Forming Inverters** | 1.3.1 | Virtual synchronous machine & 2026 inertia-market model |
-| **3D Stability Surface** | 1.4 | Interactive Figure 1.2 — stability vs. MCP latency |
-| **Intervention Cost Pivot** | 1.2 | €3 bn → downward bend with autonomous resilience |
-| **Scmd Manifold Updates** | 1.4 | Live +3.7 / +2.4 → total +6.1 points |
-| **Roadmap & Export** | 1.4 | 2025 vs 2030 table + one-click CSV matching Appendix A |
+| Tab                        | Chapter Section | What You Can Do |
+|----------------------------|-----------------|-----------------|
+| **RoCoF & Swing Equation** | 1.1             | Reproduce 49.91 Hz crisis and 180 ms ΦMCP arrest |
+| **Grid-Forming Inverters** | 1.3.1           | Virtual synchronous machine & 2026 inertia-market model |
+| **3D Stability Surface**   | 1.4             | Interactive Figure 1.2 — stability vs. MCP latency |
+| **Intervention Cost Pivot**| 1.2             | €3 bn → downward bend with autonomous resilience |
+| **Scmd Manifold Updates**  | 1.4             | Live +3.7 / +2.4 → total +6.1 points |
+| **Roadmap & Export**       | 1.4             | 2025 vs 2030 table + one-click CSV matching Appendix A |
 
 ---
 
 ## Technical Integration Philosophy
 
-The codebase mirrors the same engineering standards the book demands of the grid: **modular, sovereign, and verifiable**. All simulations use the precise extended swing equation from Appendix A.9, with ΦMCP as the first real-world damping implementation. No external API calls — full data sovereignty by design. Ready for live MCP connectors (Anthropic/Linux Foundation standard) to replace synthetic data with real 50Hertz or TenneT telemetry.
+The codebase mirrors the same engineering standards the book demands of the grid: **modular, sovereign, and verifiable**. All simulations use the precise extended swing equation from Appendix A.9, with ΦMCP as the first real-world damping implementation. Full data sovereignty by design. Ready for live MCP connectors.
 
 This is the **executable heartbeat** that proves the book’s blueprint began at 03:17.
 
 ---
 
-## For Energy System Integrators & Developers
 
-Whether you are modelling inertia markets, building agentic frequency-control platforms, or advising on the kinetic-to-synthetic transition, this repository delivers:
-- Reproducible proofs tied 1:1 to the published book figures
-- Production-grade modules ready for field deployment
-- Open MIT licensing for unrestricted commercial and research use
-
-Contributions extending ΦMCP models, deepening 3D visualisations, or adding real-time MCP inverter connectors are actively welcomed.
-
----
 
 **Part of The Renewables Migration Technical Ecosystem**  
-From the €1.45 trillion receipt to sovereign AI-driven grid dominance — the 03:17 thread begins here. Verified. Executable. Ready for integration.
+From the €1.45 trillion receipt to sovereign AI-driven grid dominance — the 03:17 thread begins here. 
 
 *Last updated: March 24, 2026*
