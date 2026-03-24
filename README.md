@@ -49,9 +49,9 @@ sequenceDiagram
 ### 2. Digital Defense Hierarchy (Chapter 1.2)
 ```mermaid
 flowchart TD
-    A[Kinetic Inertia\n0-2 s\n130 GVA·s floor] --> B[Primary Control (FCR)\nmax 30 s\nMCP enabled 180 ms response]
-    B --> C[Secondary Control (aFRR)\n5-15 min\nPreemptive weather and demand agents]
-    C --> D[Tertiary Control and Redispatch\n15 min or more\nAutonomous, under 1 bn EUR/year]
+    A[Kinetic Inertia\n0-2 s\n130 GVA·s floor] --> B["Primary Control (FCR)\nmax 30 s\nMCP 180 ms response"]
+    B --> C["Secondary Control (aFRR)\n5-15 min\nPreemptive weather and demand agents"]
+    C --> D["Tertiary Control and Redispatch\n15 min or more\nAutonomous, under 1 bn EUR/year"]
     style A fill:#1e3a8a,stroke:#60a5fa
     style D fill:#166534,stroke:#4ade80
 ```
