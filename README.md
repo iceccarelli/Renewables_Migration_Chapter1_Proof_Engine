@@ -14,9 +14,6 @@ The proof engine operationalizes every core claim in Chapter 1:
 - The €3 billion annual grid-intervention cost baseline and its downward pivot
 - The first **+6.1 Scmd** (Sovereign Command) manifold updates
 - The 2025 triage → 2030 autonomous roadmap
-
-It is production-ready code that system integrators, grid operators, and researchers can embed directly into live inertia-market platforms and MCP agent architectures.
-
 ---
 
 ## Quick Start — Verify Sovereign Inertia in < 60 Seconds
