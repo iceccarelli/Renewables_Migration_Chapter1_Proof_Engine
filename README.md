@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 
-This repository is the **official computational companion** to Chapter 1 of Vincenzo Grimaldi’s *The Renewables Migration* (March 21, 2026). It mathematically verifies the exact engineering crisis that opens the book — the 03:17 moment on a windless December night in 2025 when Continental Europe’s frequency hit **49.91 Hz**, synthetic inertia reached its historic floor of **130 GVA·s**, and the Rate-of-Change-of-Frequency (RoCoF) was 30 ms from breaching 1 Hz/s.
+This repository is the **official computational companion** to Chapter 1 of Vincenzo Grimaldi’s *The Renewables Migration* (March 21, 2026). 
 
 The proof engine operationalizes every core claim in Chapter 1:
 - The extended swing equation with the **Φ<sub>MCP</sub>** damping term
@@ -131,10 +131,6 @@ Renewables_Migration_Chapter1_Proof_Engine/
 | **Roadmap & Export**       | 1.4             | 2025 vs 2030 table + one-click CSV matching Appendix A |
 
 ---
-
-## Technical Integration Philosophy
-
-The codebase mirrors the same engineering standards the book demands of the grid: **modular, sovereign, and verifiable**. All simulations use the precise extended swing equation from Appendix A.9, with ΦMCP as the first real-world damping implementation. Full data sovereignty by design. Ready for live MCP connectors.
 
 This is the **executable heartbeat** that proves the book’s blueprint began at 03:17.
 
